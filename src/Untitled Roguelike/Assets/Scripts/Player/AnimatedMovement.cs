@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class AnimatedMovement : ReceiverMonoBehaviour<MovePlayer>
 {
+    private bool _moving = false;
     private float _duration = 0.1f;
 
     public override void Handle(MovePlayer message)
     {
+        if (_moving)
+            return;
+
         var start = transform.position;
         var end = new Vector3(message.Direction.x, message.Direction.y);
         end += start;
+        _moving = true;
 
         StartCoroutine(MovePlayer(start, end));
     }
@@ -31,5 +36,6 @@ public class AnimatedMovement : ReceiverMonoBehaviour<MovePlayer>
 
         transform.position = end;
         MessageQueue.Instance.Post(new MovePlayerEnd(start, end));
+        _moving = false;
     }
 }

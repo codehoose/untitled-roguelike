@@ -47,6 +47,12 @@ public class MessageQueue : MonoBehaviour
             list.Add(receiver);
     }
 
+    public void Register<TMessage>(Action<TMessage> action) where TMessage : IMessage
+    {
+        var methodReceiver = new MethodReceiver<TMessage>(action);
+        Register<TMessage>(methodReceiver);
+    }
+
     public void Post(BaseMessage message)
     {
         if (!_receivers.ContainsKey(message.GetType()))
