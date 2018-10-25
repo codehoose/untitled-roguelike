@@ -2,12 +2,13 @@
 
 public class TreasureChest : MonoBehaviour
 {
-    private bool _closed = true;
+    public bool Opened { get; private set; }
 
     public Sprite openSprite;   
     
     public void Open()
     {
+        Opened = true;
         GetComponent<SpriteRenderer>().sprite = openSprite;
     }
 }

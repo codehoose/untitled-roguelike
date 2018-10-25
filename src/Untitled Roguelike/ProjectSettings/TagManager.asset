@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Impassable
   - TreasureChest
+  - Mob
   layers:
   - Default
   - TransparentFX

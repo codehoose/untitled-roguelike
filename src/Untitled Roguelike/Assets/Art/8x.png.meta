@@ -15,7 +15,7 @@ TextureImporter:
     21300016: 8x_8
     21300018: 8x_9
     21300020: 8x_10
-    21300022: 8x_11
+    21300022: Zombie
     21300024: 8x_12
     21300026: 8x_13
     21300028: 8x_14
@@ -435,7 +435,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 8x_11
+      name: Zombie
       rect:
         serializedVersion: 2
         x: 123

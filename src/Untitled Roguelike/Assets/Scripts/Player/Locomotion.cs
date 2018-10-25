@@ -16,17 +16,9 @@ public class Locomotion : MonoBehaviour
 
     private void MovePlayer(Vector2 direction)
     {
-        var hit = Physics2D.Raycast(transform.position, direction, 1f);
-        if (hit && hit.collider.tag == WorldObjectTag.Impassable)
-            return;
+        var canMovePlayer = TraversalManager.Instance.CanMovePlayer(transform.position, direction);
 
-        if (hit && hit.collider.tag == WorldObjectTag.TreasureChest)
-        {
-            var openChest = new OpenChest(hit.collider.GetComponent<TreasureChest>());
-            MessageQueue.Instance.Post(openChest);
-            return;
-        }
-
-        MessageQueue.Instance.Post(new MovePlayer(direction));        
+        if (canMovePlayer)
+            MessageQueue.Instance.Post(new MovePlayer(direction));        
     }
 }
