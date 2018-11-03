@@ -6,16 +6,10 @@ class MobTraversalHandler : ITraversalHandler
 
     public bool Hit(GameObject gameObject)
     {
-        // TODO: How do we handle superior weapons? Like if the player is carrying
-        // a +4 broadsword?
-
         var mob = gameObject.GetComponent<Mob>();
-        mob.health--;
-        if (mob.health == 0)
-        {
-            GameObject.Destroy(gameObject);
-        }
-        
+        var message = new MeleeAttackMobMessage(mob);
+        MessageQueue.Instance.Post(message);
+
         return false; // Player cannot pass
     }
 }

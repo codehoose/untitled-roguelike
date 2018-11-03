@@ -24,13 +24,30 @@ Features implemented in this video:
 - Abstract the hit system out of Locomotion
 - Static NPC for attacks
   - Some kind of basic hit point system
-# Things to Implement
-From video #3:
+
+# Video 4
 - Basic inventory system (melee and range weapons)
-- Abstract input..?
-- Abstract movement..?
-
-
+  - How many items can you carry? (SLOTS) [X]
+  - Player stats system [X]
+    - Melee attack strength [X]
+    - Range attack strength [X]
+    - Defensive strength (shields) [X]
+    - Hit points (health) - 10 [X]
+  - Weapons e.g. range, melee and shields i.e. Equipment uses items from your inventory
+    - Equipped / unequipped [X]
+      - Equipped slots [X]
+      - Main hand, offhand, shield [X]
+  - Consumables e.g. food
+    - When you use it applies a certain effect on your character
+      - e.g. drink potion, gets +1 melee attack bonus for 1min
+        - Buff and then a de-buff
+      - e.g. Adds +1 to health
+    - Is removed from inventory on use
+- Buff / de-buff weapons & equipment (i.e. hit, shield etc.) [X]
+- Abstract input
+- Status bar text e.g. You are overburdoned?
+- Abstract movement - are we moving in 2d or 3d. Doesn't matter as far as the game is concerned
+# Things to Implement
 - Debug info?
 - --Input & movement--
 - --Commands for movement, save, etc.--
