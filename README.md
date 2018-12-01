@@ -4,7 +4,6 @@ The master branch has the bleeding edge code. If you want to get the code for a 
 
 # Video 1 - Player Movement
 Implemented cell-by-cell movement. This took a little long (~1hr) because I wanted to implement a message queue system. This will help in the long run and was required for later on. Features implemented in this video:
-
 - Player input using the cursor keys
 - Animated movement of the player's sprite from one cell to another in the cardinal directions (North, South, East and West)
 - Message queue to send messages, events and commands
@@ -27,26 +26,33 @@ Features implemented in this video:
 
 # Video 4
 - Basic inventory system (melee and range weapons)
-  - How many items can you carry? (SLOTS) [X]
-  - Player stats system [X]
-    - Melee attack strength [X]
-    - Range attack strength [X]
-    - Defensive strength (shields) [X]
-    - Hit points (health) - 10 [X]
+  - How many items can you carry? (SLOTS)
+  - Player stats system
+    - Melee attack strength
+    - Range attack strength
+    - Defensive strength (shields
+    - Hit points (health) - 10
   - Weapons e.g. range, melee and shields i.e. Equipment uses items from your inventory
-    - Equipped / unequipped [X]
-      - Equipped slots [X]
-      - Main hand, offhand, shield [X]
+    - Equipped / unequipped
+      - Equipped slots
+      - Main hand, offhand, shield
   - Consumables e.g. food
     - When you use it applies a certain effect on your character
       - e.g. drink potion, gets +1 melee attack bonus for 1min
         - Buff and then a de-buff
       - e.g. Adds +1 to health
     - Is removed from inventory on use
-- Buff / de-buff weapons & equipment (i.e. hit, shield etc.) [X]
+- Buff / de-buff weapons & equipment (i.e. hit, shield etc.)
 - Abstract input
 - Status bar text e.g. You are overburdoned?
 - Abstract movement - are we moving in 2d or 3d. Doesn't matter as far as the game is concerned
+
+# Video 5
+- Designing map in Tiled and bringing that data into the game
+- Added serialization classes to pull in the data from Tiled's JSON format object
+- Creating a tilemap object in Unity and addition collision detection for the player
+- Having to offset the map generation because tiles are from top-left and not centred
+
 # Things to Implement
 - Debug info?
 - --Input & movement--
