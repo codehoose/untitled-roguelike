@@ -53,6 +53,10 @@ Features implemented in this video:
 - Creating a tilemap object in Unity and addition collision detection for the player
 - Having to offset the map generation because tiles are from top-left and not centred
 
+# Video 6
+- Mapping the layer data in Tiled to objects in Unity
+- Moving the generate dungeon out of the tilemap render script
+
 # Things to Implement
 - Debug info?
 - --Input & movement--
